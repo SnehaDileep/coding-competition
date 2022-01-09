@@ -40,7 +40,7 @@ app.post("/Home",(req,res)=>{
 });
 
 
-
+app.post("/msg",req,res)
 
 var transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -64,6 +64,9 @@ transporter.sendMail(mailOptions, function(error, info){
     console.log('Email sent: ' + info.response);
   }
 });
+
+
+
 
 
 app.listen(3333,()=>{
